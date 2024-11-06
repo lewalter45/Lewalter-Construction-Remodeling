@@ -1,0 +1,215 @@
+/* General Styles */
+body {
+  background-image: url("/images/cover-photo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+header {
+  background-color: #f8f8f8;
+}
+
+/* Contact Navbar */
+.contact-navbar {
+  background-color: #000000;
+  color: white;
+  padding: 10px;
+}
+
+.contact-navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-navbar ul li {
+  margin: 0 15px;
+  font-size: 14px;
+}
+
+/* Style for contact info */
+.contact-info i {
+  margin-right: 8px; /* Add space between icon and text */
+  color: #fff; /* Make icon white to match the navbar text */
+  font-size: 16px; /* Adjust the icon size */
+}
+
+/* Optional: You can increase the size of the entire contact info */
+.contact-info li {
+  font-size: 14px;
+}
+
+/* Optional: Adjust hover color */
+.contact-info li:hover i {
+  color: #ccc;
+}
+
+/* New: Style for contact links */
+.contact-navbar a {
+  color: white; /* Default link color */
+  text-decoration: none; /* Remove underline */
+}
+
+/* New: Hover effect for phone and email links */
+.contact-navbar a:hover {
+  color: #dbc06c; /* Gold hover color */
+}
+
+/* Logo */
+.logo {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.logo img {
+  max-width: 90px;
+  height: auto;
+}
+
+/* Company Name */
+.company-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000000;
+  margin-top: 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Main Menu and Dropdown Styles */
+.menu-navbar ul {
+  list-style: none;
+  display: flex; /* Ensures horizontal alignment */
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-navbar ul li {
+  position: relative; /* Needed for dropdown positioning */
+  /* Remove margin to create a solid menu */
+  margin: 0;
+}
+
+.menu-navbar ul li a {
+  display: block;
+  padding: 10px 20px;
+  color: white; /* Text color for menu */
+  text-decoration: none;
+  font-size: 16px;
+  background-color: #000000;
+  /* Semi-transparent background */
+  text-transform: uppercase; /* Match background color */
+}
+
+.menu-navbar ul li a:hover {
+  background-color: #dbc06c; /* Hover color (gold) for menu */
+  cursor: pointer;
+}
+
+/* Dropdown Menu Styles */
+.menu-navbar ul li ul.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #000000; /* Same background color for dropdown */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-navbar ul li ul.dropdown li a {
+  padding: 10px;
+  color: white; /* Text color for dropdown */
+  text-decoration: none;
+  display: block;
+  background-color: #000000; /* Match dropdown background color */
+}
+
+.menu-navbar ul li ul.dropdown li a:hover {
+  background-color: #dbc06c; /* Hover color (gold) for dropdown */
+}
+
+/* Show dropdown on hover */
+.menu-navbar ul li:hover ul.dropdown {
+  display: block;
+}
+
+/* Footer styling */
+footer {
+  background-color: #000;
+  /* Dark background color */
+  padding: 15px 0;
+  margin-top: 45%;
+  color: #fff; /* Text color */
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Bottom section styling */
+.bottom-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Column styling */
+.column {
+  text-align: center;
+  flex: 1; /* Each column takes equal width */
+  margin: 10px;
+  text-transform: uppercase;
+}
+
+.column h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.column img {
+  width: 100%; /* Image will take full width of the column */
+  height: 100%; /* Image will take full height of the column */
+  max-width: none; /* Remove max width restriction */
+  border-radius: 0; /* Remove rounded corners */
+  box-shadow: none; /* Remove shadow */
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .contact-navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-navbar ul li {
+    margin-bottom: 10px;
+  }
+
+  .bottom-section {
+    flex-direction: column;
+    align-items: center;
+  }
+}
