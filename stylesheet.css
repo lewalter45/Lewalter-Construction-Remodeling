@@ -1,3 +1,12 @@
+/* General Reset */
+body,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 /* General Styles */
 body {
   background-image: url("/images/cover-photo.jpg");
@@ -6,8 +15,6 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   font-family: "Lato", sans-serif;
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -16,8 +23,65 @@ body {
 main {
   flex: 1;
 }
+
 header {
   background-color: #f8f8f8;
+}
+
+/* Top Navbar Styling */
+.contact-navbar {
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Align items vertically */
+  background-color: #f8f8f8; /* Light gray background */
+  padding: 10px 20px; /* Spacing around navbar */
+  border-bottom: 1px solid #ddd; /* Optional separator */
+}
+
+.contact-info {
+  display: flex;
+  gap: 20px; /* Spacing between contact items */
+  align-items: center; /* Vertical alignment */
+}
+
+/* Individual Contact Links */
+.contact-info li a {
+  text-decoration: none;
+  color: #ffffff; /* Change text/icon color back to white */
+  font-size: 16px; /* Font size for text */
+  display: flex; /* Allows alignment of icons and text */
+  align-items: center;
+  gap: 5px; /* Space between icon and text */
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Social Media Icons */
+.social-media a {
+  font-size: 18px; /* Icon size */
+  color: #555; /* Default icon color */
+  transition: color 0.3s ease;
+}
+
+/* Hover Effects */
+.contact-info li a:hover {
+  color: #dbc06c; /* Change color on hover */
+}
+
+.social-media a:hover {
+  color: #0077b5; /* Hover color for social icons */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-navbar {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Left align on smaller screens */
+  }
+
+  .contact-info {
+    flex-direction: column; /* Stack links on smaller screens */
+    gap: 10px; /* Reduce spacing */
+  }
 }
 
 /* Contact Navbar */
@@ -30,6 +94,7 @@ header {
 .contact-navbar ul {
   list-style: none;
   display: flex;
+
   justify-content: center;
   margin: 0;
   padding: 0;
@@ -77,6 +142,7 @@ header {
 .logo img {
   max-width: 90px;
   height: auto;
+  border-radius: 50%;
 }
 
 /* Company Name */
@@ -87,6 +153,29 @@ header {
   margin-top: 10px;
   text-align: center;
   text-transform: uppercase;
+}
+
+/* Targeting the social media container */
+.social-media {
+  display: flex;
+  justify-content: center; /* Aligns icons horizontally */
+  gap: 15px; /* Spacing between icons */
+  list-style: none; /* Removes default bullet points */
+  padding: 0;
+  margin: 0;
+}
+
+/* Targeting individual social media links */
+.social-media a {
+  color: #000; /* Default icon color */
+  font-size: 24px; /* Adjust icon size */
+  transition: color 0.3s ease; /* Smooth hover effect */
+  text-decoration: none;
+}
+
+/* Add hover effect */
+.social-media a:hover {
+  color: #0077b5; /* Example hover color (LinkedIn blue) */
 }
 
 /* Main Menu and Dropdown Styles */
