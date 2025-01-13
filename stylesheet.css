@@ -25,7 +25,7 @@ main {
 }
 
 header {
-  background-color: #f8f8f8;
+  background-color: #fff;
 }
 
 /* Top Navbar Styling */
@@ -33,7 +33,7 @@ header {
   display: flex;
   justify-content: center; /* Center content horizontally */
   align-items: center; /* Align items vertically */
-  background-color: #f8f8f8; /* Light gray background */
+  background-color: #fff; /* Light gray background */
   padding: 10px 20px; /* Spacing around navbar */
   border-bottom: 1px solid #ddd; /* Optional separator */
 }
@@ -47,7 +47,7 @@ header {
 /* Individual Contact Links */
 .contact-info li a {
   text-decoration: none;
-  color: #ffffff; /* Change text/icon color back to white */
+  color: #fff; /* Change text/icon color back to white */
   font-size: 16px; /* Font size for text */
   display: flex; /* Allows alignment of icons and text */
   align-items: center;
@@ -86,7 +86,7 @@ header {
 
 /* Contact Navbar */
 .contact-navbar {
-  background-color: #000000;
+  background-color: #000;
   color: white;
   padding: 10px;
 }
@@ -119,12 +119,12 @@ header {
 
 /* Optional: Adjust hover color */
 .contact-info li:hover i {
-  color: #ccc;
+  color: #fff;
 }
 
 /* New: Style for contact links */
 .contact-navbar a {
-  color: white; /* Default link color */
+  color: #fff; /* Default link color */
   text-decoration: none; /* Remove underline */
 }
 
@@ -135,8 +135,10 @@ header {
 
 /* Logo */
 .logo {
-  text-align: center;
+  display: flex;
+  text-align: left;
   margin: 20px 0;
+  justify-content: space-evenly;
 }
 
 .logo img {
@@ -147,9 +149,10 @@ header {
 
 /* Company Name */
 .company-name {
+  display: flex;
   font-size: 40px;
-  font-weight: bold;
-  color: #000000;
+  font-weight: 800;
+  color: #000;
   margin-top: 10px;
   text-align: center;
   text-transform: uppercase;
@@ -195,11 +198,13 @@ header {
 
 .menu-navbar ul li a {
   display: block;
+  border-radius: 30px;
   padding: 10px 20px;
-  color: white; /* Text color for menu */
+  color: #fff; /* Text color for menu */
   text-decoration: none;
-  font-size: 16px;
-  background-color: #000000;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: transparent;
   /* Semi-transparent background */
   text-transform: uppercase; /* Match background color */
 }
@@ -215,18 +220,19 @@ header {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #000000; /* Same background color for dropdown */
+  background-color: transparent; /* Same background color for dropdown */
   list-style: none;
   margin: 0;
   padding: 0;
+  z-index: 10; /* Ensure dropdown is on top */
 }
 
 .menu-navbar ul li ul.dropdown li a {
-  padding: 10px;
-  color: white; /* Text color for dropdown */
+  padding: 3px;
+  color: #fff; /* Text color for dropdown */
   text-decoration: none;
   display: block;
-  background-color: #000000; /* Match dropdown background color */
+  background-color: transparent; /* Match dropdown background color */
 }
 
 .menu-navbar ul li ul.dropdown li a:hover {
@@ -238,12 +244,83 @@ header {
   display: block;
 }
 
+/* Hero Section Styles*/
+/* Base styling for the hero section */
+section {
+  background-color: transparent;
+  margin-top: 30px;
+  backdrop-filter: blur(1px);
+  padding: 80px 20px;
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-content h2 {
+  font-size: 2.5rem;
+  color: #6e260e;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  color: #fff;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.hero-content a {
+  display: inline-block;
+  background-color: #9d763e;
+  color: #fff;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero-content a:hover {
+  background-color: #dbc06c;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  section {
+    padding: 50px 15px;
+  }
+
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+} /* Spacing around content */
+
 /* Footer styling */
 footer {
   background-color: #000;
   /* Dark background color */
   padding: 15px 0;
-  margin-top: 45%;
+  margin-top: 0%;
   color: #fff; /* Text color */
   position: relative;
   bottom: 0;
